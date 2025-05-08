@@ -1,0 +1,179 @@
+.addGroup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(51, 58, 38);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 400px;
+  max-width: 90%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.groupInput {
+  margin-bottom: 20px;
+}
+
+.groupInput label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.groupInput input {
+  background: rgba(17, 25, 40, 0.5);
+  color: white;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchSection {
+  margin-bottom: 20px;
+}
+
+.searchSection form {
+  display: flex;
+  gap: 10px;
+}
+
+.searchSection input {
+  background: rgba(17, 25, 40, 0.5);
+  color: white;
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchSection button {
+  padding: 8px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchResults,
+.userListSection {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.userItem:hover {
+  border-radius: 10px;
+  background: #384912c5;
+}
+
+.userItem img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.membersSection {
+  margin: 20px 0;
+}
+
+.membersList {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.memberItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 10px;
+}
+
+.memberItem img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.removeBtn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancelButton {
+  padding: 8px 15px;
+  background: #9b281fda;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createButton {
+  padding: 8px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createButton:disabled {
+  background: #4d4414;
+  cursor: not-allowed;
+}
+
+.loadingIndicator {
+  padding: 10px;
+  text-align: center;
+  color: #666;
+}
+
+.emptyState {
+  padding: 10px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
