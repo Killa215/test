@@ -1,0 +1,185 @@
+.chatList {
+	flex: 1;
+	overflow: scroll;
+
+	.search {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 20px;
+
+		.searchBar {
+			flex: 1;
+			background: rgba(17, 25, 40, 0.5);
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			border-radius: 10px;
+			padding: 10px;
+
+			input {
+				background: transparent;
+				border: none;
+				outline: none;
+				color: white;
+				flex: 1;
+			}
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.add {
+			width: 36px;
+			height: 36px;
+			background: rgba(17, 25, 40, 0.5);
+			padding: 10px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.group {
+			width: 36px;
+			height: 36px;
+			background: rgba(17, 25, 40, 0.5);
+			padding: 10px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	}
+
+	.item {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 20px;
+		cursor: pointer;
+		border-bottom: 1px solid #dddddd35;
+
+		img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		.texts {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			span {
+				font-weight: 500;
+			}
+
+			p {
+				font-size: 14px;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.chatList::-webkit-scrollbar {
+	width: 0;
+}
+
+.actionButtons {
+	display: flex;
+	gap: 10px;
+}
+
+.group {
+
+	cursor: pointer;
+}
+
+.context-menu {
+	position: fixed;
+	background-color: #333;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+.context-menu-item {
+	background: none;
+	border: none;
+	color: #fff;
+	padding: 8px 15px;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+}
+
+.context-menu-item:hover {
+	background-color: #555;
+}
+
+.group-badge {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background-color: #4CAF50;
+	color: white;
+	padding: 2px 5px;
+	border-radius: 10px;
+	font-size: 10px;
+}
+
+.item {
+	position: relative;
+}
+
+/* Для кнопки удаления в ChatList */
+.item {
+	position: relative;
+	padding-right: 30px;
+}
+
+.delete-chat-btn {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #ff4d4d;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+
+.delete-chat-btn:hover {
+	background: #ff0000;
+}
+
+/* Для кнопки в Detail */
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.buttons button {
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.buttons .logout {
+	background-color: #ff4d4d;
+	color: white;
+}
+
+.buttons .logout:hover {
+	background-color: #ff0000;
+}
