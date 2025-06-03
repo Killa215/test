@@ -93,7 +93,7 @@ const Login = () => {
 				<h2>Создать аккаунт</h2>
 				<form onSubmit={handleRegister}>
 					<label htmlFor='file'>
-						<img src={avatar.url || '../../../public/avatar.png'} alt='' />
+						<img src={avatar.url || './avatar.png'} alt='' />
 						Загрузить фото
 					</label>
 					<input

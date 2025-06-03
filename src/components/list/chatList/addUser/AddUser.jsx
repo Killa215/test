@@ -137,10 +137,7 @@ const AddUser = ({ onClose }) => {
 				{users.map(user => (
 					<div className='user' key={user.id}>
 						<div className='detail'>
-							<img
-								src={user.avatar || '../../../../../public/avatar.png'}
-								alt={user.username}
-							/>
+							<img src={user.avatar || './avatar.png'} alt={user.username} />
 							<span>{user.username}</span>
 						</div>
 						<button onClick={() => handleAdd(user)}>Добавить</button>

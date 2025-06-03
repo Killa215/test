@@ -112,7 +112,7 @@ const UserInfo = () => {
 				<div className='edit-form'>
 					<div className='avatar-edit'>
 						<img
-							src={avatarPreview || '../../../../public/avatar.png'}
+							src={avatarPreview || '.avatar.png'}
 							alt='Аватар'
 							onClick={() => fileInputRef.current.click()}
 							style={{ cursor: 'pointer' }}
@@ -144,15 +144,12 @@ const UserInfo = () => {
 			) : (
 				<>
 					<div className='user'>
-						<img
-							src={currentUser.avatar || '../../../../public/avatar.png'}
-							alt='Аватар'
-						/>
+						<img src={currentUser.avatar || './avatar.png'} alt='Аватар' />
 						<h2>{currentUser.username}</h2>
 					</div>
 					<div className='icons' ref={dropdownRef}>
 						<img
-							src='../../../../public/more.png'
+							src='./more.png'
 							alt='Меню'
 							onClick={toggleDropdown}
 							style={{ cursor: 'pointer' }}
@@ -165,7 +162,7 @@ const UserInfo = () => {
 							</div>
 						)}
 						<img
-							src='../../../../public/edit.png'
+							src='./edit.png'
 							alt='Редактировать'
 							onClick={handleEditClick}
 							style={{ cursor: 'pointer' }}

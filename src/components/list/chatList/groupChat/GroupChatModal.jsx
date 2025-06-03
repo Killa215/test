@@ -204,7 +204,7 @@ const AddGroup = ({ onClose }) => {
 				user: {
 					id: newChatRef.id,
 					username: groupData.name,
-					avatar: groupData.avatar || '../../../../public/avatar.png',
+					avatar: groupData.avatar || './avatar.png',
 					isGroup: true,
 				},
 			})
@@ -263,10 +263,7 @@ const AddGroup = ({ onClose }) => {
 						<h4>Результаты поиска:</h4>
 						{searchResults.map(user => (
 							<div key={user.id} className='userItem'>
-								<img
-									src={user.avatar || '../../../../public/avatar.png'}
-									alt={user.username}
-								/>
+								<img src={user.avatar || './avatar.png'} alt={user.username} />
 								<span>{user.username}</span>
 								<button onClick={() => handleAddUser(user)}>Добавить</button>
 							</div>
@@ -291,7 +288,7 @@ const AddGroup = ({ onClose }) => {
 									onClick={() => handleAddUser(user)}
 								>
 									<img
-										src={user.avatar || '../../../../public/avatar.png'}
+										src={user.avatar || './avatar.png'}
 										alt={user.username}
 									/>
 									<span>{user.username}</span>
@@ -307,7 +304,7 @@ const AddGroup = ({ onClose }) => {
 				<div className='membersList'>
 					<div className='memberItem current'>
 						<img
-							src={currentUser.avatar || '../../../../public/avatar.png'}
+							src={currentUser.avatar || './avatar.png'}
 							alt={currentUser.username}
 						/>
 						<span>{currentUser.username} (Вы)</span>
@@ -315,10 +312,7 @@ const AddGroup = ({ onClose }) => {
 
 					{selectedUsers.map(user => (
 						<div key={user.id} className='memberItem'>
-							<img
-								src={user.avatar || '../../../../public/avatar.png'}
-								alt={user.username}
-							/>
+							<img src={user.avatar || './avatar.png'} alt={user.username} />
 							<span>{user.username}</span>
 							<button
 								className='removeBtn'
